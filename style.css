@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+:root {
+  --darkText: hsl(238, 29%, 16%);
+  --redText: hsl(14, 88%, 65%);
+  --violetGradient: hsl(273, 75%, 66%);
+  --blueGradient: hsl(240, 73%, 65%);
+  --darkVeryGrayishText: hsl(237, 12%, 33%);
+  --darkGrayishText: hsl(240, 6%, 50%);
+  --dividers: hsl(240, 5%, 91%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+body {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(
+    180deg,
+    var(--violetGradient) 10%,
+    var(--blueGradient) 100%
+  );
+  display: block;
+}
+
+#container {
+  border-radius: 20px;
+  background: white;
+  margin: 50vh auto 0 auto;
+  transform: translateY(-50%);
+  display: flex;
+  width: 750px;
+  height: 400px;
+}
+
+#svg {
+  width: 50%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+#cube {
+  position: absolute;
+  left: -94px;
+  top: 160px;
+  z-index: 1;
+  transform: scale(0.85);
+}
+
+#geometric {
+  position: absolute;
+  transform: scale(0.8);
+  left: -560px;
+  top: -320px;
+}
+
+#woman {
+  position: absolute;
+  transform: scale(0.8);
+  left: -115px;
+  top: 30px;
+}
+
+#accordion {
+  width: 40%;
+  font-size: 12px;
+}
+
+.item {
+  width: 100%;
+  height: 30px;
+  cursor: pointer;
+  display: block;
+  border: none;
+  border-bottom: var(--dividers) 1px solid;
+}
+
+.question {
+  display: flex;
+  margin: 15px 0;
+  align-items: center;
+}
+
+#accordion svg {
+  position: absolute;
+  right: 80px;
+}
+
+.answer {
+  display: none;
+  font-size: 11px;
+}
+.active {
+  height: 80px;
+}
+
+.active .answer {
+  display: block;
+}
+
+.active .question {
+  font-weight: bolder;
+}
+
+h1 {
+  font-size: 27px;
+  margin: 50px 0 30px 0;
+}
+
+.active svg {
+  transform: rotateX(180deg);
+}
+
+@media screen and (max-width: 840px) {
+  
+  #container {
+    display: block;
+    width: 340px;
+    height: 550px;
+    overflow: visible;
+    margin: 15vh auto 0 auto;
+    letter-spacing: -0.5px;
+    transform: scale(0.98);
+  }
+
+  #svg {
+    width: 100%;
+    height: 20%;
+    position: relative;
+    overflow: visible;
+    display: flex;
+    justify-content: center;
+  }
+
+  #cube {
+    position: absolute;
+    top: -88px;
+    left: -10px;
+    z-index: 1;
+    transform: scale(0.55);
+  }
+
+  #geometric {
+    position: absolute;
+    transform: scale(0.27);
+    left: -310px;
+    top: -490px;
+  }
+
+  #woman {
+    position: absolute;
+    transform: scale(0.55);
+    top: -200px;
+    left: -65px;
+  }
+
+  #accordion {
+    width: 100%;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 30px;
+    margin: 55px 0;
+  }
+
+  .item {
+    margin: 0 auto;
+    width: 82%;
+  }
+
+  #accordion svg {
+    position: absolute;
+    right: 35px;
+  }
+}
